@@ -43,7 +43,7 @@ struct HeroDetailView: View {
                 .padding(.horizontal)
             }
         }
-        .ignoresSafeArea(edges: .top)
+        // .ignoresSafeArea(edges: .top)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
