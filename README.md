@@ -8,7 +8,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Swift-6.0-F05138?style=for-the-badge&logo=swift&logoColor=white" alt="Swift">
-  <img src="https://img.shields.io/badge/SwiftUI-iOS_17+-007AFF?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI">
+  <img src="https://img.shields.io/badge/SwiftUI-iOS_26.2+-007AFF?style=for-the-badge&logo=swift&logoColor=white" alt="SwiftUI">
   <img src="https://img.shields.io/badge/Exercises-5-9B59B6?style=for-the-badge" alt="Exercises">
   <img src="https://img.shields.io/badge/License-MIT-2ECC71?style=for-the-badge" alt="License">
 </p>
@@ -38,23 +38,14 @@
   <img src="EjerciciosUIs/snapshots/MusicPlayer.png" width="280" alt="Music Player">
 </p>
 
-**Reproductor de música con AVFoundation**
+**Reproductor de música con AVFoundation** — Imagen de fondo que cubre la parte superior con icono de música centrado. Barra de reproducción interactiva con Slider y controles de volumen. Tres botones redondos con etiquetas para navegación.
 
-| Component | Implementation |
-|-----------|---------------|
-| **Play/Pause** | AVAudioPlayer control |
-| **Progress** | Interactive Slider |
-| **Volume** | System volume binding |
-| **Background** | ZStack with overlay |
-
-```swift
-// Key pattern: AVAudioPlayer integration
-@Observable class MusicPlayerViewModel {
-    var isPlaying = false
-    var progress: Double = 0
-    private var player: AVAudioPlayer?
-}
-```
+| Component | Implementation | Pattern |
+|-----------|---------------|---------|
+| **Play/Pause** | AVAudioPlayer control | @Observable ViewModel |
+| **Progress** | Interactive Slider | State binding |
+| **Volume** | System volume binding | ZStack overlay |
+| **Background** | Full-screen image | ignoresSafeArea() |
 
 ---
 
@@ -64,53 +55,34 @@
   <img src="EjerciciosUIs/snapshots/Weather.png" width="280" alt="Weather App">
 </p>
 
-**App del tiempo completa**
+**App del tiempo completa** — Sol con nubes en la parte superior, temperatura con sombra sobre imagen decorativa. Tres secciones con previsión horaria en ScrollView horizontal y diaria con barras de temperatura usando ProgressView.
 
-| Component | Implementation |
-|-----------|---------------|
-| **Current** | Temperature + conditions |
-| **Hourly** | Horizontal ScrollView |
-| **Daily** | Temperature bar charts |
-| **Picker** | Segmented control (Today/24h/10d) |
-
-```swift
-// Key pattern: Segmented picker
-Picker("Forecast", selection: $selectedPeriod) {
-    Text("Today").tag(Period.today)
-    Text("24h").tag(Period.hourly)
-    Text("10 Days").tag(Period.daily)
-}
-.pickerStyle(.segmented)
-```
+| Component | Implementation | Pattern |
+|-----------|---------------|---------|
+| **Current** | Temperature + conditions | Segmented Picker |
+| **Hourly** | Horizontal ScrollView | LazyHStack |
+| **Daily** | Temperature bar charts | ProgressView |
+| **Picker** | Today / 24h / 10 días | pickerStyle(.segmented) |
 
 ---
 
 <img src="https://img.shields.io/badge/✅_EXERCISE_3:_TASK_LIST-34C759?style=for-the-badge" alt="Task List">
 
 <p align="center">
-  <img src="EjerciciosUIs/snapshots/TaskList.png" width="220" alt="Task List">
+  <img src="EjerciciosUIs/snapshots/TaskList.png" width="220" align="middle" alt="Task List">
   &nbsp;&nbsp;&nbsp;
-  <img src="EjerciciosUIs/snapshots/TaskList_NuevaTarea.png" width="220" alt="New Task">
+  <img src="EjerciciosUIs/snapshots/TaskList_NuevaTarea.png" width="220" align="middle" alt="New Task">
 </p>
 
-**Gestión de tareas con CRUD completo**
+**Gestión de tareas con CRUD completo** — Lista con 3 botones de filtro en la parte superior y 2 de categoría debajo. Listado de elementos con diferentes configuraciones visuales según estado y prioridad. Modal sheet para añadir nuevas tareas.
 
-| Feature | Implementation |
-|---------|---------------|
-| **Filters** | All / Pending / Completed |
-| **Categories** | Work / Personal badges |
-| **Priority** | Color-coded indicators |
-| **Delete** | Swipe with confirmation |
-| **Add** | Sheet modal form |
-
-```swift
-// Key pattern: Computed property filtering
-var filteredTasks: [TaskItem] {
-    tasks.filter { task in
-        matchesStatus(task) && matchesCategory(task)
-    }
-}
-```
+| Feature | Implementation | Pattern |
+|---------|---------------|---------|
+| **Filters** | All / Pending / Completed | Computed properties |
+| **Categories** | Work / Personal badges | Swipe actions |
+| **Priority** | Color-coded indicators | Sheet modals |
+| **Delete** | Swipe with confirmation | onDelete modifier |
+| **Add** | Sheet modal form | @Environment dismiss |
 
 ---
 
@@ -120,58 +92,34 @@ var filteredTasks: [TaskItem] {
   <img src="EjerciciosUIs/snapshots/CardGallery.png" width="280" alt="Card Gallery">
 </p>
 
-**Galería de tarjetas con componentes reutilizables**
+**Galería de tarjetas con componentes reutilizables** — Distintas propuestas de tarjetas y construcciones. Componentes individuales dentro de vistas únicas que luego se combinan en vistas más grandes. Imágenes circulares con información de perfil y contacto.
 
-| Component | Implementation |
-|-----------|---------------|
-| **Profile Cards** | Circular images + info |
-| **Contact Cards** | Icons + details |
-| **Grid Layout** | Adaptive LazyVGrid |
-| **Effects** | Shadows + rounded corners |
-
-```swift
-// Key pattern: Adaptive grid
-LazyVGrid(columns: [
-    GridItem(.adaptive(minimum: 150))
-], spacing: 16) {
-    ForEach(cards) { card in
-        CardView(card: card)
-    }
-}
-```
+| Component | Implementation | Pattern |
+|-----------|---------------|---------|
+| **Profile Cards** | Circular images + info | LazyVGrid adaptive |
+| **Contact Cards** | Icons + details | GridItem(.adaptive) |
+| **Grid Layout** | Adaptive columns | Reusable components |
+| **Effects** | Shadows + rounded corners | ViewModifier |
 
 ---
 
 <img src="https://img.shields.io/badge/🦸_EXERCISE_5:_HEROES-FF9500?style=for-the-badge" alt="Heroes">
 
 <p align="center">
-  <img src="EjerciciosUIs/snapshots/Heroes.png" width="220" alt="Heroes List">
+  <img src="EjerciciosUIs/snapshots/Heroes.png" width="220" align="middle" alt="Heroes List">
   &nbsp;&nbsp;&nbsp;
-  <img src="EjerciciosUIs/snapshots/Heroes_Detail.png" width="220" alt="Hero Detail">
+  <img src="EjerciciosUIs/snapshots/Heroes_Detail.png" width="220" align="middle" alt="Hero Detail">
 </p>
 
-**Catálogo de 20 superhéroes con navegación maestro-detalle**
+**Catálogo de 20 superhéroes con navegación maestro-detalle** — Pantalla master con grid/list de héroes seleccionables. Pantalla de detalle con datos completos: nombreReal, apodo, descripción, edad, poderes e imagen. 31 tipos de poderes disponibles mediante enumeración.
 
-| Feature | Implementation |
-|---------|---------------|
-| **Master** | Grid/List of heroes |
-| **Detail** | Full hero info + powers |
-| **Powers** | Badge collection (31 types) |
-| **Images** | Custom hero artwork |
-
-```swift
-// Key pattern: Master-detail navigation
-NavigationStack {
-    List(heroes) { hero in
-        NavigationLink(value: hero) {
-            HeroRow(hero: hero)
-        }
-    }
-    .navigationDestination(for: Hero.self) { hero in
-        HeroDetailView(hero: hero)
-    }
-}
-```
+| Feature | Implementation | Pattern |
+|---------|---------------|---------|
+| **Master** | Grid/List of heroes | NavigationStack |
+| **Detail** | Full hero info + powers | navigationDestination |
+| **Powers** | Badge collection (31 types) | ForEach + Chip |
+| **Images** | Custom hero artwork | Assets catalog |
+| **Data** | SuperHeroesData.swift | Global test data |
 
 ---
 
@@ -180,7 +128,7 @@ NavigationStack {
 | Category | Technologies |
 |:--------:|-------------|
 | **Language** | Swift 6 |
-| **UI** | SwiftUI (iOS 17+) |
+| **UI** | SwiftUI |
 | **Architecture** | Clean Architecture + MVVM |
 | **Concurrency** | async/await, @MainActor |
 | **Observation** | @Observable |
@@ -188,28 +136,33 @@ NavigationStack {
 
 ---
 
-<img src="https://img.shields.io/badge/PATTERNS_LEARNED-9B59B6?style=for-the-badge" alt="Patterns">
-
-| Pattern | Exercises |
-|---------|-----------|
-| **@Observable ViewModel** | All 5 exercises |
-| **Computed Properties** | TaskList, Heroes |
-| **NavigationStack** | Heroes |
-| **Sheet Modals** | TaskList |
-| **Picker Styles** | Weather |
-| **LazyVGrid** | CardGallery, Heroes |
-| **AVFoundation** | MusicPlayer |
-| **Swipe Actions** | TaskList |
-
----
-
 <img src="https://img.shields.io/badge/REQUIREMENTS-7F8C8D?style=for-the-badge" alt="Requirements">
 
 | Requirement | Version |
 |:-----------:|:-------:|
-| iOS | 17.0+ |
-| Xcode | 16+ |
+| iOS | 26.2+ |
+| Xcode | 26.2+ |
 | Swift | 6 |
+
+---
+
+<img src="https://img.shields.io/badge/PROJECT_STRUCTURE-95A5A6?style=for-the-badge" alt="Structure">
+
+```
+EjerciciosUIs/
+├── EjerciciosUIs.icon/
+├── Views/
+│   ├── Ejercicio1_MusicPlayer/
+│   ├── Ejercicio2_Weather/
+│   ├── Ejercicio3_TaskList/
+│   ├── Ejercicio4_CardGallery/
+│   └── Ejercicio5_Heroes/
+├── ViewModels/
+├── Models/
+├── Resources/
+├── System/
+└── Assets.xcassets/
+```
 
 ---
 
@@ -222,36 +175,6 @@ open EjerciciosUIs.xcodeproj
 ```
 
 Select an iOS simulator and run with `⌘R`.
-
----
-
-<img src="https://img.shields.io/badge/PROJECT_STRUCTURE-95A5A6?style=for-the-badge" alt="Structure">
-
-```
-EjerciciosUIs/
-├── 📱 System/
-│   └── EjerciciosUIsApp.swift
-├── 🎨 Views/
-│   ├── MainTabView.swift
-│   ├── Ejercicio1_MusicPlayer/
-│   ├── Ejercicio2_Weather/
-│   ├── Ejercicio3_TaskList/
-│   ├── Ejercicio4_CardGallery/
-│   └── Ejercicio5_Heroes/
-├── 🧠 ViewModels/
-│   ├── MusicPlayerViewModel.swift
-│   ├── WeatherViewModel.swift
-│   ├── TaskListViewModel.swift
-│   ├── CardGalleryViewModel.swift
-│   └── HeroesViewModel.swift
-├── 📦 Models/
-│   ├── WeatherData.swift
-│   ├── TaskData.swift
-│   ├── CardData.swift
-│   └── SuperHeroesData.swift
-├── 🖼️ snapshots/
-└── 🎵 Resources/
-```
 
 ---
 
