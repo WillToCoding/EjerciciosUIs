@@ -1,5 +1,9 @@
 # EjerciciosUIs
 
+<p align="center">
+  <img src="EjerciciosUIs/snapshots/App.png" width="120" alt="EjerciciosUIs App Icon">
+</p>
+
 <h3 align="center">5 SwiftUI interface exercises — from music player to superhero gallery</h3>
 
 <p align="center">
