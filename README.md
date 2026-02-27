@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <b>Swift Developer Program 2025 — Apple Coding Academy</b><br>
+  <b>Swift Developer Program 2026 — Apple Coding Academy</b><br>
   <i>Master SwiftUI components through hands-on practice</i>
 </p>
 
@@ -270,5 +270,5 @@ EjerciciosUIs/
 </p>
 
 <p align="center">
-  <i>Swift Developer Program 2025 — Apple Coding Academy</i>
+  <i>Swift Developer Program 2026 — Apple Coding Academy</i>
 </p>
