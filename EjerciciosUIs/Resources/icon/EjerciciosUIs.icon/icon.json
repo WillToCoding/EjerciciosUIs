@@ -1,0 +1,83 @@
+{
+  "fill-specializations" : [
+    {
+      "value" : {
+        "automatic-gradient" : "extended-srgb:0.00000,0.53333,1.00000,1.00000"
+      }
+    },
+    {
+      "appearance" : "dark",
+      "value" : {
+        "linear-gradient" : [
+          "srgb:0.12981,1.00000,0.84696,1.00000",
+          "srgb:0.12981,1.00000,0.84696,1.00000"
+        ],
+        "orientation" : {
+          "start" : {
+            "x" : 0.5,
+            "y" : 1
+          },
+          "stop" : {
+            "x" : 0.5,
+            "y" : 0.3
+          }
+        }
+      }
+    }
+  ],
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "image-name" : "front 4.png",
+          "name" : "Frontal",
+          "position" : {
+            "scale" : 0.31,
+            "translation-in-points" : [
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "name" : "Frontal",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+        {
+          "image-name" : "back.png",
+          "name" : "Fondo",
+          "opacity-specializations" : [
+            {
+              "appearance" : "dark",
+              "value" : 0.63
+            }
+          ]
+        }
+      ],
+      "name" : "Fondo",
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

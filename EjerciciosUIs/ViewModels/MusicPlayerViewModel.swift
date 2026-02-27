@@ -5,6 +5,7 @@
 //  Clean Architecture + MVVM - Ejercicio 1: Reproductor de Música
 //
 
+import AVFoundation
 import SwiftUI
 
 // MARK: - Enums
@@ -33,11 +34,20 @@ final class MusicPlayerViewModel {
 
     // MARK: - Properties
 
-    var progress: Double = 0.4
-    var volume: Double = 0.7
+    var progress: Double = 0.0
+    var volume: Double = 0.7 {
+        didSet { audioPlayer?.volume = Float(volume) }
+    }
     var selectedTab: MusicTab = .music
     var isPlaying: Bool = false
-    var songDuration: Double = 180
+    var songDuration: Double = 0.0
+    var songTitle: String = "The Mountain"
+    var artistName: String = "Opening"
+
+    // MARK: - Audio
+
+    private var audioPlayer: AVAudioPlayer?
+    private var progressTask: Task<Void, Never>?
 
     // MARK: - Computed Properties
 
@@ -53,6 +63,12 @@ final class MusicPlayerViewModel {
         progress * songDuration
     }
 
+    // MARK: - Initialization
+
+    init() {
+        setupAudioPlayer()
+    }
+
     // MARK: - Public Methods
 
     func selectTab(_ tab: MusicTab) {
@@ -64,27 +80,43 @@ final class MusicPlayerViewModel {
     }
 
     func togglePlayPause() {
-        isPlaying.toggle()
+        if isPlaying {
+            pause()
+        } else {
+            play()
+        }
     }
 
     func play() {
+        audioPlayer?.play()
         isPlaying = true
+        startProgressUpdates()
     }
 
     func pause() {
+        audioPlayer?.pause()
         isPlaying = false
+        stopProgressUpdates()
     }
 
     func skipForward() {
-        progress = min(1.0, progress + 0.1)
+        guard let player = audioPlayer else { return }
+        let newTime = min(player.duration, player.currentTime + 10)
+        player.currentTime = newTime
+        updateProgress()
     }
 
     func skipBackward() {
-        progress = max(0.0, progress - 0.1)
+        guard let player = audioPlayer else { return }
+        let newTime = max(0, player.currentTime - 10)
+        player.currentTime = newTime
+        updateProgress()
     }
 
     func setProgress(_ value: Double) {
+        guard let player = audioPlayer else { return }
         progress = max(0.0, min(1.0, value))
+        player.currentTime = progress * player.duration
     }
 
     func setVolume(_ value: Double) {
@@ -93,7 +125,49 @@ final class MusicPlayerViewModel {
 
     // MARK: - Private Methods
 
-    private nonisolated func formatTime(_ seconds: Double) -> String {
+    private func setupAudioPlayer() {
+        guard let url = Bundle.main.url(forResource: "the_mountain-opening-138168", withExtension: "mp3") else {
+            print("Audio file not found")
+            return
+        }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.prepareToPlay()
+            audioPlayer?.volume = Float(volume)
+            songDuration = audioPlayer?.duration ?? 0.0
+        } catch {
+            print("Error loading audio: \(error.localizedDescription)")
+        }
+    }
+
+    private func startProgressUpdates() {
+        progressTask = Task {
+            while !Task.isCancelled && isPlaying {
+                updateProgress()
+                try? await Task.sleep(for: .milliseconds(100))
+            }
+        }
+    }
+
+    private func stopProgressUpdates() {
+        progressTask?.cancel()
+        progressTask = nil
+    }
+
+    private func updateProgress() {
+        guard let player = audioPlayer, player.duration > 0 else { return }
+        progress = player.currentTime / player.duration
+
+        // Si llegó al final, pausar
+        if progress >= 1.0 {
+            pause()
+            progress = 0.0
+            audioPlayer?.currentTime = 0
+        }
+    }
+
+    private func formatTime(_ seconds: Double) -> String {
         let duration = Duration.seconds(seconds)
         return duration.formatted(.time(pattern: .minuteSecond))
     }

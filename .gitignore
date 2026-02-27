@@ -1,0 +1,16 @@
+# Documentación
+Docs/
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+
+# macOS
+.DS_Store
+.DS_Store?
+
+# Build
+build/
+DerivedData/

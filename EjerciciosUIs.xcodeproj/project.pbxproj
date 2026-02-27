@@ -6,17 +6,124 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXFileReference section */
-		E863E80A2F4E49A60054B30D /* EjerciciosUIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjerciciosUIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-/* End PBXFileReference section */
+/* Begin PBXBuildFile section */
+		E8533B402F4FA850007C9FC6 /* HeroGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B362F4FA850007C9FC6 /* HeroGridItem.swift */; };
+		E8533B412F4FA850007C9FC6 /* HourlyItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1D2F4FA850007C9FC6 /* HourlyItemView.swift */; };
+		E8533B422F4FA850007C9FC6 /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B192F4FA850007C9FC6 /* CurrentWeatherView.swift */; };
+		E8533B432F4FA850007C9FC6 /* HourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1C2F4FA850007C9FC6 /* HourlyForecastView.swift */; };
+		E8533B442F4FA850007C9FC6 /* HeroActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B352F4FA850007C9FC6 /* HeroActionButtons.swift */; };
+		E8533B452F4FA850007C9FC6 /* WeatherTabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1F2F4FA850007C9FC6 /* WeatherTabsView.swift */; };
+		E8533B462F4FA850007C9FC6 /* CardGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B312F4FA850007C9FC6 /* CardGalleryView.swift */; };
+		E8533B472F4FA850007C9FC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B3C2F4FA850007C9FC6 /* ContentView.swift */; };
+		E8533B482F4FA850007C9FC6 /* HeroesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B3E2F4FA850007C9FC6 /* HeroesListView.swift */; };
+		E8533B492F4FA850007C9FC6 /* MusicIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B102F4FA850007C9FC6 /* MusicIconView.swift */; };
+		E8533B4A2F4FA850007C9FC6 /* StatsCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B2F2F4FA850007C9FC6 /* StatsCardView.swift */; };
+		E8533B4B2F4FA850007C9FC6 /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B2A2F4FA850007C9FC6 /* TaskListView.swift */; };
+		E8533B4C2F4FA850007C9FC6 /* HeroPowerTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B3A2F4FA850007C9FC6 /* HeroPowerTag.swift */; };
+		E8533B4D2F4FA850007C9FC6 /* DailyRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1B2F4FA850007C9FC6 /* DailyRowView.swift */; };
+		E8533B4E2F4FA850007C9FC6 /* ContactCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B2C2F4FA850007C9FC6 /* ContactCardView.swift */; };
+		E8533B4F2F4FA850007C9FC6 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B122F4FA850007C9FC6 /* ProgressBarView.swift */; };
+		E8533B502F4FA850007C9FC6 /* BottomControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B0E2F4FA850007C9FC6 /* BottomControlsView.swift */; };
+		E8533B512F4FA850007C9FC6 /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B132F4FA850007C9FC6 /* TabButton.swift */; };
+		E8533B522F4FA850007C9FC6 /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B242F4FA850007C9FC6 /* FilterButton.swift */; };
+		E8533B532F4FA850007C9FC6 /* TaskCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B262F4FA850007C9FC6 /* TaskCategoryView.swift */; };
+		E8533B542F4FA850007C9FC6 /* TaskFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B272F4FA850007C9FC6 /* TaskFilterView.swift */; };
+		E8533B552F4FA850007C9FC6 /* DailyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1A2F4FA850007C9FC6 /* DailyForecastView.swift */; };
+		E8533B562F4FA850007C9FC6 /* HeroInfoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B382F4FA850007C9FC6 /* HeroInfoCardView.swift */; };
+		E8533B572F4FA850007C9FC6 /* FlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B342F4FA850007C9FC6 /* FlowLayout.swift */; };
+		E8533B582F4FA850007C9FC6 /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B212F4FA850007C9FC6 /* WeatherView.swift */; };
+		E8533B592F4FA850007C9FC6 /* HeroDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B3D2F4FA850007C9FC6 /* HeroDetailView.swift */; };
+		E8533B5A2F4FA850007C9FC6 /* WeatherTabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B1E2F4FA850007C9FC6 /* WeatherTabButton.swift */; };
+		E8533B5B2F4FA850007C9FC6 /* CategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B232F4FA850007C9FC6 /* CategoryButton.swift */; };
+		E8533B5C2F4FA850007C9FC6 /* HeroHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B372F4FA850007C9FC6 /* HeroHeaderView.swift */; };
+		E8533B5D2F4FA850007C9FC6 /* TabButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B142F4FA850007C9FC6 /* TabButtonsView.swift */; };
+		E8533B5E2F4FA850007C9FC6 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B282F4FA850007C9FC6 /* TaskRowView.swift */; };
+		E8533B5F2F4FA850007C9FC6 /* HeroPowersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B392F4FA850007C9FC6 /* HeroPowersView.swift */; };
+		E8533B602F4FA850007C9FC6 /* VolumeControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B152F4FA850007C9FC6 /* VolumeControlView.swift */; };
+		E8533B612F4FA850007C9FC6 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B332F4FA850007C9FC6 /* ActionButton.swift */; };
+		E8533B622F4FA850007C9FC6 /* PlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B112F4FA850007C9FC6 /* PlayerControlsView.swift */; };
+		E8533B632F4FA850007C9FC6 /* EqualizerBarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B0F2F4FA850007C9FC6 /* EqualizerBarsView.swift */; };
+		E8533B642F4FA850007C9FC6 /* ProfileCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B2D2F4FA850007C9FC6 /* ProfileCardView.swift */; };
+		E8533B652F4FA850007C9FC6 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B172F4FA850007C9FC6 /* MusicPlayerView.swift */; };
+		E8533B662F4FA850007C9FC6 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B2E2F4FA850007C9FC6 /* SectionHeader.swift */; };
+		E8533B672F4FA850007C9FC6 /* PriorityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B252F4FA850007C9FC6 /* PriorityIndicator.swift */; };
+		E8533B7F2F4FC883007C9FC6 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8533B7E2F4FC883007C9FC6 /* AddTaskView.swift */; };
+		E8533B942F4FD5AA007C9FC6 /* the_mountain-opening-138168.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8533B932F4FD5AA007C9FC6 /* the_mountain-opening-138168.mp3 */; };
+		E863E81C2F4E49D60054B30D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E863E8182F4E49D60054B30D /* Assets.xcassets */; };
+		E863E81E2F4E49D60054B30D /* EjerciciosUIsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E81A2F4E49D60054B30D /* EjerciciosUIsApp.swift */; };
+		E863E8742F4E5BC50054B30D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8732F4E5BC50054B30D /* MainTabView.swift */; };
+		E863E8C62F4E91720054B30D /* EjerciciosUIs.icon in Resources */ = {isa = PBXBuildFile; fileRef = E863E8C52F4E91720054B30D /* EjerciciosUIs.icon */; };
+		E863E8E52F4EB6F90054B30D /* Poderes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8E12F4EB6F90054B30D /* Poderes.swift */; };
+		E863E8E62F4EB6F90054B30D /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8DF2F4EB6F90054B30D /* CardData.swift */; };
+		E863E8E72F4EB6F90054B30D /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8DB2F4EB6F90054B30D /* WeatherData.swift */; };
+		E863E8E82F4EB6F90054B30D /* SuperHeroesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8E22F4EB6F90054B30D /* SuperHeroesData.swift */; };
+		E863E8E92F4EB6F90054B30D /* TaskData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E8DD2F4EB6F90054B30D /* TaskData.swift */; };
+		E863E94E2F4EB7B60054B30D /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E9462F4EB7B60054B30D /* WeatherViewModel.swift */; };
+		E863E94F2F4EB7B60054B30D /* CardGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E94A2F4EB7B60054B30D /* CardGalleryViewModel.swift */; };
+		E863E9502F4EB7B60054B30D /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E9482F4EB7B60054B30D /* TaskListViewModel.swift */; };
+		E863E9512F4EB7B60054B30D /* MusicPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E9442F4EB7B60054B30D /* MusicPlayerViewModel.swift */; };
+		E863E9522F4EB7B60054B30D /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E863E94C2F4EB7B60054B30D /* HeroesViewModel.swift */; };
+/* End PBXBuildFile section */
 
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		E863E80C2F4E49A60054B30D /* EjerciciosUIs */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = EjerciciosUIs;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
+/* Begin PBXFileReference section */
+		E8533B0E2F4FA850007C9FC6 /* BottomControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlsView.swift; sourceTree = "<group>"; };
+		E8533B0F2F4FA850007C9FC6 /* EqualizerBarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualizerBarsView.swift; sourceTree = "<group>"; };
+		E8533B102F4FA850007C9FC6 /* MusicIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicIconView.swift; sourceTree = "<group>"; };
+		E8533B112F4FA850007C9FC6 /* PlayerControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlsView.swift; sourceTree = "<group>"; };
+		E8533B122F4FA850007C9FC6 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		E8533B132F4FA850007C9FC6 /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButton.swift; sourceTree = "<group>"; };
+		E8533B142F4FA850007C9FC6 /* TabButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabButtonsView.swift; sourceTree = "<group>"; };
+		E8533B152F4FA850007C9FC6 /* VolumeControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeControlView.swift; sourceTree = "<group>"; };
+		E8533B172F4FA850007C9FC6 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		E8533B192F4FA850007C9FC6 /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		E8533B1A2F4FA850007C9FC6 /* DailyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyForecastView.swift; sourceTree = "<group>"; };
+		E8533B1B2F4FA850007C9FC6 /* DailyRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRowView.swift; sourceTree = "<group>"; };
+		E8533B1C2F4FA850007C9FC6 /* HourlyForecastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyForecastView.swift; sourceTree = "<group>"; };
+		E8533B1D2F4FA850007C9FC6 /* HourlyItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyItemView.swift; sourceTree = "<group>"; };
+		E8533B1E2F4FA850007C9FC6 /* WeatherTabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTabButton.swift; sourceTree = "<group>"; };
+		E8533B1F2F4FA850007C9FC6 /* WeatherTabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTabsView.swift; sourceTree = "<group>"; };
+		E8533B212F4FA850007C9FC6 /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		E8533B232F4FA850007C9FC6 /* CategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryButton.swift; sourceTree = "<group>"; };
+		E8533B242F4FA850007C9FC6 /* FilterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButton.swift; sourceTree = "<group>"; };
+		E8533B252F4FA850007C9FC6 /* PriorityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityIndicator.swift; sourceTree = "<group>"; };
+		E8533B262F4FA850007C9FC6 /* TaskCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCategoryView.swift; sourceTree = "<group>"; };
+		E8533B272F4FA850007C9FC6 /* TaskFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFilterView.swift; sourceTree = "<group>"; };
+		E8533B282F4FA850007C9FC6 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
+		E8533B2A2F4FA850007C9FC6 /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		E8533B2C2F4FA850007C9FC6 /* ContactCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCardView.swift; sourceTree = "<group>"; };
+		E8533B2D2F4FA850007C9FC6 /* ProfileCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCardView.swift; sourceTree = "<group>"; };
+		E8533B2E2F4FA850007C9FC6 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		E8533B2F2F4FA850007C9FC6 /* StatsCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCardView.swift; sourceTree = "<group>"; };
+		E8533B312F4FA850007C9FC6 /* CardGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGalleryView.swift; sourceTree = "<group>"; };
+		E8533B332F4FA850007C9FC6 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
+		E8533B342F4FA850007C9FC6 /* FlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowLayout.swift; sourceTree = "<group>"; };
+		E8533B352F4FA850007C9FC6 /* HeroActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroActionButtons.swift; sourceTree = "<group>"; };
+		E8533B362F4FA850007C9FC6 /* HeroGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroGridItem.swift; sourceTree = "<group>"; };
+		E8533B372F4FA850007C9FC6 /* HeroHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderView.swift; sourceTree = "<group>"; };
+		E8533B382F4FA850007C9FC6 /* HeroInfoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInfoCardView.swift; sourceTree = "<group>"; };
+		E8533B392F4FA850007C9FC6 /* HeroPowersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPowersView.swift; sourceTree = "<group>"; };
+		E8533B3A2F4FA850007C9FC6 /* HeroPowerTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroPowerTag.swift; sourceTree = "<group>"; };
+		E8533B3C2F4FA850007C9FC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8533B3D2F4FA850007C9FC6 /* HeroDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailView.swift; sourceTree = "<group>"; };
+		E8533B3E2F4FA850007C9FC6 /* HeroesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesListView.swift; sourceTree = "<group>"; };
+		E8533B7E2F4FC883007C9FC6 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		E8533B932F4FD5AA007C9FC6 /* the_mountain-opening-138168.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "the_mountain-opening-138168.mp3"; sourceTree = "<group>"; };
+		E863E80A2F4E49A60054B30D /* EjerciciosUIs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EjerciciosUIs.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E863E8182F4E49D60054B30D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E863E81A2F4E49D60054B30D /* EjerciciosUIsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EjerciciosUIsApp.swift; sourceTree = "<group>"; };
+		E863E8732F4E5BC50054B30D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		E863E8C52F4E91720054B30D /* EjerciciosUIs.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = EjerciciosUIs.icon; sourceTree = "<group>"; };
+		E863E8DB2F4EB6F90054B30D /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		E863E8DD2F4EB6F90054B30D /* TaskData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskData.swift; sourceTree = "<group>"; };
+		E863E8DF2F4EB6F90054B30D /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		E863E8E12F4EB6F90054B30D /* Poderes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poderes.swift; sourceTree = "<group>"; };
+		E863E8E22F4EB6F90054B30D /* SuperHeroesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesData.swift; sourceTree = "<group>"; };
+		E863E9442F4EB7B60054B30D /* MusicPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewModel.swift; sourceTree = "<group>"; };
+		E863E9462F4EB7B60054B30D /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		E863E9482F4EB7B60054B30D /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
+		E863E94A2F4EB7B60054B30D /* CardGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGalleryViewModel.swift; sourceTree = "<group>"; };
+		E863E94C2F4EB7B60054B30D /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E863E8072F4E49A60054B30D /* Frameworks */ = {
@@ -29,10 +136,127 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E8533B162F4FA850007C9FC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B0E2F4FA850007C9FC6 /* BottomControlsView.swift */,
+				E8533B0F2F4FA850007C9FC6 /* EqualizerBarsView.swift */,
+				E8533B102F4FA850007C9FC6 /* MusicIconView.swift */,
+				E8533B112F4FA850007C9FC6 /* PlayerControlsView.swift */,
+				E8533B122F4FA850007C9FC6 /* ProgressBarView.swift */,
+				E8533B132F4FA850007C9FC6 /* TabButton.swift */,
+				E8533B142F4FA850007C9FC6 /* TabButtonsView.swift */,
+				E8533B152F4FA850007C9FC6 /* VolumeControlView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8533B182F4FA850007C9FC6 /* Ejercicio1_MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B162F4FA850007C9FC6 /* Components */,
+				E8533B172F4FA850007C9FC6 /* MusicPlayerView.swift */,
+			);
+			path = Ejercicio1_MusicPlayer;
+			sourceTree = "<group>";
+		};
+		E8533B202F4FA850007C9FC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B192F4FA850007C9FC6 /* CurrentWeatherView.swift */,
+				E8533B1A2F4FA850007C9FC6 /* DailyForecastView.swift */,
+				E8533B1B2F4FA850007C9FC6 /* DailyRowView.swift */,
+				E8533B1C2F4FA850007C9FC6 /* HourlyForecastView.swift */,
+				E8533B1D2F4FA850007C9FC6 /* HourlyItemView.swift */,
+				E8533B1E2F4FA850007C9FC6 /* WeatherTabButton.swift */,
+				E8533B1F2F4FA850007C9FC6 /* WeatherTabsView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8533B222F4FA850007C9FC6 /* Ejercicio2_Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B202F4FA850007C9FC6 /* Components */,
+				E8533B212F4FA850007C9FC6 /* WeatherView.swift */,
+			);
+			path = Ejercicio2_Weather;
+			sourceTree = "<group>";
+		};
+		E8533B292F4FA850007C9FC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B232F4FA850007C9FC6 /* CategoryButton.swift */,
+				E8533B242F4FA850007C9FC6 /* FilterButton.swift */,
+				E8533B252F4FA850007C9FC6 /* PriorityIndicator.swift */,
+				E8533B262F4FA850007C9FC6 /* TaskCategoryView.swift */,
+				E8533B272F4FA850007C9FC6 /* TaskFilterView.swift */,
+				E8533B282F4FA850007C9FC6 /* TaskRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8533B2B2F4FA850007C9FC6 /* Ejercicio3_TaskList */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B7E2F4FC883007C9FC6 /* AddTaskView.swift */,
+				E8533B2A2F4FA850007C9FC6 /* TaskListView.swift */,
+				E8533B292F4FA850007C9FC6 /* Components */,
+			);
+			path = Ejercicio3_TaskList;
+			sourceTree = "<group>";
+		};
+		E8533B302F4FA850007C9FC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B2C2F4FA850007C9FC6 /* ContactCardView.swift */,
+				E8533B2D2F4FA850007C9FC6 /* ProfileCardView.swift */,
+				E8533B2E2F4FA850007C9FC6 /* SectionHeader.swift */,
+				E8533B2F2F4FA850007C9FC6 /* StatsCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8533B322F4FA850007C9FC6 /* Ejercicio4_CardGallery */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B312F4FA850007C9FC6 /* CardGalleryView.swift */,
+				E8533B302F4FA850007C9FC6 /* Components */,
+			);
+			path = Ejercicio4_CardGallery;
+			sourceTree = "<group>";
+		};
+		E8533B3B2F4FA850007C9FC6 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B332F4FA850007C9FC6 /* ActionButton.swift */,
+				E8533B342F4FA850007C9FC6 /* FlowLayout.swift */,
+				E8533B352F4FA850007C9FC6 /* HeroActionButtons.swift */,
+				E8533B362F4FA850007C9FC6 /* HeroGridItem.swift */,
+				E8533B372F4FA850007C9FC6 /* HeroHeaderView.swift */,
+				E8533B382F4FA850007C9FC6 /* HeroInfoCardView.swift */,
+				E8533B392F4FA850007C9FC6 /* HeroPowersView.swift */,
+				E8533B3A2F4FA850007C9FC6 /* HeroPowerTag.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		E8533B3F2F4FA850007C9FC6 /* Ejercicio5_Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				E863E8732F4E5BC50054B30D /* MainTabView.swift */,
+				E8533B3B2F4FA850007C9FC6 /* Components */,
+				E8533B3C2F4FA850007C9FC6 /* ContentView.swift */,
+				E8533B3D2F4FA850007C9FC6 /* HeroDetailView.swift */,
+				E8533B3E2F4FA850007C9FC6 /* HeroesListView.swift */,
+			);
+			path = Ejercicio5_Heroes;
+			sourceTree = "<group>";
+		};
 		E863E8012F4E49A60054B30D = {
 			isa = PBXGroup;
 			children = (
-				E863E80C2F4E49A60054B30D /* EjerciciosUIs */,
+				E863E81B2F4E49D60054B30D /* EjerciciosUIs */,
 				E863E80B2F4E49A60054B30D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +267,72 @@
 				E863E80A2F4E49A60054B30D /* EjerciciosUIs.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E863E81B2F4E49D60054B30D /* EjerciciosUIs */ = {
+			isa = PBXGroup;
+			children = (
+				E863E8C52F4E91720054B30D /* EjerciciosUIs.icon */,
+				E863E8252F4E4DF60054B30D /* Views */,
+				E863E8CC2F4EA1960054B30D /* ViewModels */,
+				E863E8E42F4EB6F90054B30D /* Models */,
+				E863E81F2F4E49DA0054B30D /* System */,
+				E863E8202F4E49FF0054B30D /* Resources */,
+				E863E8182F4E49D60054B30D /* Assets.xcassets */,
+			);
+			path = EjerciciosUIs;
+			sourceTree = "<group>";
+		};
+		E863E81F2F4E49DA0054B30D /* System */ = {
+			isa = PBXGroup;
+			children = (
+				E863E81A2F4E49D60054B30D /* EjerciciosUIsApp.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		E863E8202F4E49FF0054B30D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B932F4FD5AA007C9FC6 /* the_mountain-opening-138168.mp3 */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E863E8252F4E4DF60054B30D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8533B182F4FA850007C9FC6 /* Ejercicio1_MusicPlayer */,
+				E8533B222F4FA850007C9FC6 /* Ejercicio2_Weather */,
+				E8533B2B2F4FA850007C9FC6 /* Ejercicio3_TaskList */,
+				E8533B322F4FA850007C9FC6 /* Ejercicio4_CardGallery */,
+				E8533B3F2F4FA850007C9FC6 /* Ejercicio5_Heroes */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E863E8CC2F4EA1960054B30D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E863E9442F4EB7B60054B30D /* MusicPlayerViewModel.swift */,
+				E863E9462F4EB7B60054B30D /* WeatherViewModel.swift */,
+				E863E9482F4EB7B60054B30D /* TaskListViewModel.swift */,
+				E863E94A2F4EB7B60054B30D /* CardGalleryViewModel.swift */,
+				E863E94C2F4EB7B60054B30D /* HeroesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E863E8E42F4EB6F90054B30D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E863E8DB2F4EB6F90054B30D /* WeatherData.swift */,
+				E863E8DD2F4EB6F90054B30D /* TaskData.swift */,
+				E863E8DF2F4EB6F90054B30D /* CardData.swift */,
+				E863E8E12F4EB6F90054B30D /* Poderes.swift */,
+				E863E8E22F4EB6F90054B30D /* SuperHeroesData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +349,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				E863E80C2F4E49A60054B30D /* EjerciciosUIs */,
 			);
 			name = EjerciciosUIs;
 			packageProductDependencies = (
@@ -109,6 +396,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8533B942F4FD5AA007C9FC6 /* the_mountain-opening-138168.mp3 in Resources */,
+				E863E8C62F4E91720054B30D /* EjerciciosUIs.icon in Resources */,
+				E863E81C2F4E49D60054B30D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +409,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E863E8E52F4EB6F90054B30D /* Poderes.swift in Sources */,
+				E863E8E62F4EB6F90054B30D /* CardData.swift in Sources */,
+				E863E8E72F4EB6F90054B30D /* WeatherData.swift in Sources */,
+				E863E8E82F4EB6F90054B30D /* SuperHeroesData.swift in Sources */,
+				E863E8E92F4EB6F90054B30D /* TaskData.swift in Sources */,
+				E863E81E2F4E49D60054B30D /* EjerciciosUIsApp.swift in Sources */,
+				E863E8742F4E5BC50054B30D /* MainTabView.swift in Sources */,
+				E863E94E2F4EB7B60054B30D /* WeatherViewModel.swift in Sources */,
+				E863E94F2F4EB7B60054B30D /* CardGalleryViewModel.swift in Sources */,
+				E8533B7F2F4FC883007C9FC6 /* AddTaskView.swift in Sources */,
+				E863E9502F4EB7B60054B30D /* TaskListViewModel.swift in Sources */,
+				E863E9512F4EB7B60054B30D /* MusicPlayerViewModel.swift in Sources */,
+				E863E9522F4EB7B60054B30D /* HeroesViewModel.swift in Sources */,
+				E8533B402F4FA850007C9FC6 /* HeroGridItem.swift in Sources */,
+				E8533B412F4FA850007C9FC6 /* HourlyItemView.swift in Sources */,
+				E8533B422F4FA850007C9FC6 /* CurrentWeatherView.swift in Sources */,
+				E8533B432F4FA850007C9FC6 /* HourlyForecastView.swift in Sources */,
+				E8533B442F4FA850007C9FC6 /* HeroActionButtons.swift in Sources */,
+				E8533B452F4FA850007C9FC6 /* WeatherTabsView.swift in Sources */,
+				E8533B462F4FA850007C9FC6 /* CardGalleryView.swift in Sources */,
+				E8533B472F4FA850007C9FC6 /* ContentView.swift in Sources */,
+				E8533B482F4FA850007C9FC6 /* HeroesListView.swift in Sources */,
+				E8533B492F4FA850007C9FC6 /* MusicIconView.swift in Sources */,
+				E8533B4A2F4FA850007C9FC6 /* StatsCardView.swift in Sources */,
+				E8533B4B2F4FA850007C9FC6 /* TaskListView.swift in Sources */,
+				E8533B4C2F4FA850007C9FC6 /* HeroPowerTag.swift in Sources */,
+				E8533B4D2F4FA850007C9FC6 /* DailyRowView.swift in Sources */,
+				E8533B4E2F4FA850007C9FC6 /* ContactCardView.swift in Sources */,
+				E8533B4F2F4FA850007C9FC6 /* ProgressBarView.swift in Sources */,
+				E8533B502F4FA850007C9FC6 /* BottomControlsView.swift in Sources */,
+				E8533B512F4FA850007C9FC6 /* TabButton.swift in Sources */,
+				E8533B522F4FA850007C9FC6 /* FilterButton.swift in Sources */,
+				E8533B532F4FA850007C9FC6 /* TaskCategoryView.swift in Sources */,
+				E8533B542F4FA850007C9FC6 /* TaskFilterView.swift in Sources */,
+				E8533B552F4FA850007C9FC6 /* DailyForecastView.swift in Sources */,
+				E8533B562F4FA850007C9FC6 /* HeroInfoCardView.swift in Sources */,
+				E8533B572F4FA850007C9FC6 /* FlowLayout.swift in Sources */,
+				E8533B582F4FA850007C9FC6 /* WeatherView.swift in Sources */,
+				E8533B592F4FA850007C9FC6 /* HeroDetailView.swift in Sources */,
+				E8533B5A2F4FA850007C9FC6 /* WeatherTabButton.swift in Sources */,
+				E8533B5B2F4FA850007C9FC6 /* CategoryButton.swift in Sources */,
+				E8533B5C2F4FA850007C9FC6 /* HeroHeaderView.swift in Sources */,
+				E8533B5D2F4FA850007C9FC6 /* TabButtonsView.swift in Sources */,
+				E8533B5E2F4FA850007C9FC6 /* TaskRowView.swift in Sources */,
+				E8533B5F2F4FA850007C9FC6 /* HeroPowersView.swift in Sources */,
+				E8533B602F4FA850007C9FC6 /* VolumeControlView.swift in Sources */,
+				E8533B612F4FA850007C9FC6 /* ActionButton.swift in Sources */,
+				E8533B622F4FA850007C9FC6 /* PlayerControlsView.swift in Sources */,
+				E8533B632F4FA850007C9FC6 /* EqualizerBarsView.swift in Sources */,
+				E8533B642F4FA850007C9FC6 /* ProfileCardView.swift in Sources */,
+				E8533B652F4FA850007C9FC6 /* MusicPlayerView.swift in Sources */,
+				E8533B662F4FA850007C9FC6 /* SectionHeader.swift in Sources */,
+				E8533B672F4FA850007C9FC6 /* PriorityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +592,7 @@
 		E863E8162F4E49A80054B30D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EjerciciosUIs;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -269,11 +612,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.murtidev.EjerciciosUIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -281,7 +624,7 @@
 		E863E8172F4E49A80054B30D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = EjerciciosUIs;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -301,11 +644,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.murtidev.EjerciciosUIs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_APPROACHABLE_CONCURRENCY = NO;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

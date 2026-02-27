@@ -29,13 +29,13 @@
     {
       "layers" : [
         {
-          "image-name" : "front 4.png",
+          "image-name" : "Gemini_Generated_Image_bp2ukubp2ukubp2u.png",
           "name" : "Frontal",
           "position" : {
-            "scale" : 0.31,
+            "scale" : 0.49,
             "translation-in-points" : [
-              0,
-              0
+              -11.1640625,
+              -103.88000000000011
             ]
           }
         }

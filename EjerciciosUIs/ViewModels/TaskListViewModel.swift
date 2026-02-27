@@ -13,13 +13,19 @@ final class TaskListViewModel {
 
     // MARK: - Properties
 
-    var tasks: [Task] = sampleTasks
+    var tasks: [TaskItem] = sampleTasks
     var selectedFilter: TaskFilter = .all
     var selectedCategory: TaskCategory? = nil
 
+    // MARK: - Delete Confirmation
+
+    var showDeleteAlert = false
+    var deleteMessage = ""
+    var pendingDeleteOffsets: IndexSet? = nil
+
     // MARK: - Computed Properties
 
-    var filteredTasks: [Task] {
+    var filteredTasks: [TaskItem] {
         tasks.filter { task in
             matchesFilter(task) && matchesCategory(task)
         }
@@ -39,29 +45,46 @@ final class TaskListViewModel {
 
     // MARK: - Public Methods
 
-    func toggleTask(_ task: Task) {
+    func toggleTask(_ task: TaskItem) {
         guard let index = tasks.firstIndex(where: { $0.id == task.id }) else { return }
         tasks[index].isCompleted.toggle()
     }
 
-    func deleteTask(_ task: Task) {
-        tasks.removeAll { $0.id == task.id }
-    }
+    // MARK: - Delete Methods
 
-    func deleteTask(at offsets: IndexSet) {
-        let tasksToDelete = offsets.map { filteredTasks[$0] }
-        for task in tasksToDelete {
-            deleteTask(task)
+    func delete(at offsets: IndexSet) {
+        // Cuando hay filtros activos, necesitamos mapear los índices filtrados a los originales
+        if selectedFilter != .all || selectedCategory != nil {
+            let tasksToDelete = offsets.map { filteredTasks[$0] }
+            tasks.removeAll { task in tasksToDelete.contains { $0.id == task.id } }
+        } else {
+            tasks.remove(atOffsets: offsets)
         }
     }
 
-    func addTask(title: String, priority: TaskPriority, category: TaskCategory) {
-        let newTask = Task(
+    func confirmDelete(at offsets: IndexSet) {
+        pendingDeleteOffsets = offsets
+        if let index = offsets.first {
+            let task = filteredTasks[index]
+            deleteMessage = "¿Eliminar \"\(task.title)\"?"
+            showDeleteAlert = true
+        }
+    }
+
+    func deletePendingTask() {
+        if let offsets = pendingDeleteOffsets {
+            delete(at: offsets)
+            pendingDeleteOffsets = nil
+        }
+    }
+
+    func addTask(title: String, priority: TaskPriority, category: TaskCategory, dueTime: String? = nil) {
+        let newTask = TaskItem(
             title: title,
             isCompleted: false,
             priority: priority,
             category: category,
-            dueTime: nil,
+            dueTime: dueTime,
             stars: 0
         )
         tasks.append(newTask)
@@ -81,7 +104,7 @@ final class TaskListViewModel {
 
     // MARK: - Private Methods
 
-    private func matchesFilter(_ task: Task) -> Bool {
+    private func matchesFilter(_ task: TaskItem) -> Bool {
         switch selectedFilter {
         case .all: true
         case .pending: !task.isCompleted
@@ -89,7 +112,7 @@ final class TaskListViewModel {
         }
     }
 
-    private func matchesCategory(_ task: Task) -> Bool {
+    private func matchesCategory(_ task: TaskItem) -> Bool {
         guard let category = selectedCategory else { return true }
         return task.category == category
     }
